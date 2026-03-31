@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    border-radius: 2.5px;
+}
+
+body {
+    background-color: rgb(135, 102, 67);
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/713593/brick.png')
+}
+.container {
+    margin: 10% 10% 0 10%;    
+    /* width: 500px; */
+    background: linear-gradient(180deg, rgba(71,71,71,1) 0%, rgba(167,172,180,1) 100%);    
+    border: 15px solid gray;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 2%;
+    box-shadow: 0px 5px 15px 10px rgba(0,0,0,0.48);
+}
+
+.sign{
+    background: radial-gradient(circle, rgb(136, 136, 136) 0%, rgb(81, 93, 106)100%);
+    box-shadow: darkblue;
+    padding: 10%;
+    box-shadow: 1px 18px 9px -2px rgba(48, 48, 48, 0.75);
+}
+.sign>h1 {
+    color:rgb(0, 216, 0);
+    animation: blink 2s linear infinite;
+}
+.cam {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin: 0 45%;
+    background: radial-gradient(circle, rgb(43, 108, 39) 0%, rgba(10,17,20,1) 58%);
+}
+@keyframes blink{
+    0%{opacity: 0.5;}
+    25%{opacity: 1;}
+    50%{opacity: 0.5;}
+    75%{opacity: 1;}
+    100%{opacity: 0.5;}
+    }
+
+.atm-top {
+    border-top: 50px solid rgb(79, 79, 79);
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent;
+    height: 0;
+    width: 100%;
+}
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 10%;
+    padding: 5%;
+    height: 250px;
+    border-radius: 2.5px;
+    background: radial-gradient(circle, rgba(250,250,250,1) 0%, rgb(166, 205, 250) 100%);
+}
+.screen>input{
+    margin: 5%;
+}
+
+.alerts, .warning {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.atm-bottom {
+	border-bottom: 100px solid #555;
+	border-left: 48px solid transparent;
+	border-right: 48px solid transparent;
+	height: 0;
+	width: 100%;
+
+}
+.user-buttons{
+    display: grid;
+    padding-top: 10%;
+    gap: 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 7%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.withdraw-btn{
+    background-color: red;
+    display: inline-block; 
+    transform: skew(-15deg);
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.48);
+}
+
+.deposit-btn{
+    background-color: green;
+    display: inline-block; 
+    transform: skew(15deg);
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.48);
+}
+
+.atm-base {
+    margin: -1% 10%;  
+    /* width: 500px; */
+    height: 100px;
+    background: linear-gradient(180deg, rgb(55, 55, 55) 0%, rgb(116, 117, 118) 100%);    
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.48);
+    z-index: -10;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+}
+.atm-base>div{
+    border: 2px solid rgb(67, 67, 67);
+    margin: 25%;
+    padding: 1%;
+    width: 50%;
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.48) inset;
+    z-index: 10;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 2%;
+    font-size: 10px;
+}

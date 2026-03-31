@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<link href="static/css/locker.css" rel="stylesheet">
+<div class="container">
+    <h1 class="h3 mb-5 text-gray-800">Access Granted to Following User</h1>
+      <table class="rwd-table">
+        <tbody>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Account No</th>
+          </tr>
+          <tr>
+            <td data-th="Supplier Code">
+              {{ name }}
+            </td>
+            <td data-th="Supplier Name">
+              {{ lname }}
+            </td>
+            <td data-th="Invoice Number">
+              {{ lockerid }}
+            </td>
+          </tr>
+        
+        </tbody>
+      </table>
+    
+    </div>
+
+    {% endblock %}
